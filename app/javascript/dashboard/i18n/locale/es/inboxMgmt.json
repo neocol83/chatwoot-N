@@ -520,7 +520,11 @@
       "WHATSAPP_SECTION_UPDATE_BUTTON": "Actualizar",
       "WHATSAPP_WEBHOOK_TITLE": "Token de verificación del Webhook",
       "WHATSAPP_WEBHOOK_SUBHEADER": "Este token se utiliza para verificar la autenticidad del extremo del webhook.",
-      "UPDATE_PRE_CHAT_FORM_SETTINGS": "Actualizar configuración de Formulario de Chat"
+      "UPDATE_PRE_CHAT_FORM_SETTINGS": "Actualizar configuración de Formulario de Chat",
+      "AGENT_PERMISSIONS": "Permisos del agente",
+      "AGENT_PERMISSIONS_SUB_TEXT": "Actualizar permisos de agente para esta bandeja de entrada",
+      "AGENT_ALLOW_TO_DELETE_MESSAGE": "Permitir que un agente elimine un mensaje",
+      "AGENT_ALLOW_TO_DELETE_MESSAGE_SUB_TEXT": "Permitir que un agente elimine un mensaje de una conversación."
     },
     "HELP_CENTER": {
       "LABEL": "Centro de ayuda",
