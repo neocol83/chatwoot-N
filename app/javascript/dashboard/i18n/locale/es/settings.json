@@ -69,7 +69,7 @@
           "ALL": "Todos"
         },
         "ALERT_TYPE": {
-          "TITLE": "Alert events for conversations:",
+          "TITLE": "Eventos de alerta para conversaciones:",
           "NONE": "Ninguna",
           "ASSIGNED": "Conversaciones asignadas",
           "ALL_CONVERSATIONS": "Todas las conversaciones"
