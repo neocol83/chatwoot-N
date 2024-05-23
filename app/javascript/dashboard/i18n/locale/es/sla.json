@@ -1,10 +1,10 @@
 {
   "SLA": {
     "HEADER": "SLA",
-    "ADD_ACTION": "A�adir SLA",
+    "ADD_ACTION": "Añadir SLA",
     "ADD_ACTION_LONG": "Crear una nueva política de SLA",
-    "DESCRIPTION": "Los Acuerdos de Nivel de Servicio (SLA) son contratos que definen expectativas claras entre su equipo y sus clientes. Establecen normas para los tiempos de respuesta y resoluci�n, creando un marco para la responsabilidad y garantiza una experiencia coherente y de alta calidad.",
-    "LEARN_MORE": "M�s informaci�n sobre SLA",
+    "DESCRIPTION": "Los Acuerdos de Nivel de Servicio (SLA) son contratos que definen expectativas claras entre su equipo y sus clientes. Establecen normas para los tiempos de respuesta y resolución, creando un marco para la responsabilidad y garantiza una experiencia coherente y de alta calidad.",
+    "LEARN_MORE": "Más información sobre SLA",
     "LOADING": "Obteniendo SLAs",
     "PAYWALL": {
       "TITLE": "Actualice para crear SLA",
@@ -31,7 +31,7 @@
       "RESPONSE_TYPES": {
         "FRT": "Umbral de tiempo de primera respuesta",
         "NRT": "Umbral de tiempo de siguiente respuesta",
-        "RT": "Umbral de tiempo de resoluci�n",
+        "RT": "Umbral de tiempo de resolución",
         "SHORT_HAND": {
           "FRT": "FRT",
           "NRT": "NRT",
@@ -44,11 +44,11 @@
         "LABEL": "Nombre de SLA",
         "PLACEHOLDER": "Nombre de SLA",
         "REQUIRED_ERROR": "El nombre de SLA es requerido",
-        "MINIMUM_LENGTH_ERROR": "La longitud m�nima es de 2 caracteres",
-        "VALID_ERROR": "S�lo letras, n�meros, gui�n y gui�n bajo son permitidos"
+        "MINIMUM_LENGTH_ERROR": "La longitud mínima es de 2 caracteres",
+        "VALID_ERROR": "Sólo letras, números, guión y guión bajo son permitidos"
       },
       "DESCRIPTION": {
-        "LABEL": "Descripci�n",
+        "LABEL": "Descripción",
         "PLACEHOLDER": "SLA para clientes premium"
       },
       "FIRST_RESPONSE_TIME": {
@@ -56,19 +56,19 @@
         "PLACEHOLDER": "5"
       },
       "NEXT_RESPONSE_TIME": {
-        "LABEL": "Pr�ximo tiempo de respuesta",
+        "LABEL": "Próximo tiempo de respuesta",
         "PLACEHOLDER": "5"
       },
       "RESOLUTION_TIME": {
-        "LABEL": "Tiempo de resoluci�n",
+        "LABEL": "Tiempo de resolución",
         "PLACEHOLDER": "60"
       },
       "BUSINESS_HOURS": {
         "LABEL": "Horarios",
-        "PLACEHOLDER": "S�lo durante las horas de trabajo"
+        "PLACEHOLDER": "Sólo durante las horas de trabajo"
       },
       "THRESHOLD_TIME": {
-        "INVALID_FORMAT_ERROR": "El umbral debe ser un n�mero y mayor que cero"
+        "INVALID_FORMAT_ERROR": "El umbral debe ser un número y mayor que cero"
       },
       "EDIT": "Editar",
       "CREATE": "Crear",
@@ -76,23 +76,23 @@
       "CANCEL": "Cancelar"
     },
     "ADD": {
-      "TITLE": "A�adir SLA",
+      "TITLE": "Añadir SLA",
       "DESC": "¡Promesas amistosas para un excelente servicio!",
       "API": {
-        "SUCCESS_MESSAGE": "SLA a�adido correctamente",
-        "ERROR_MESSAGE": "Hubo un error, por favor int�ntelo de nuevo"
+        "SUCCESS_MESSAGE": "SLA añadido correctamente",
+        "ERROR_MESSAGE": "Hubo un error, por favor inténtelo de nuevo"
       }
     },
     "DELETE": {
       "TITLE": "Eliminar SLA",
       "API": {
         "SUCCESS_MESSAGE": "SLA eliminado correctamente",
-        "ERROR_MESSAGE": "Hubo un error, por favor int�ntelo de nuevo"
+        "ERROR_MESSAGE": "Hubo un error, por favor inténtelo de nuevo"
       },
       "CONFIRM": {
-        "TITLE": "Confirmar eliminaci�n",
-        "MESSAGE": "�Est� seguro que desea eliminar? ",
-        "YES": "S�, eliminar ",
+        "TITLE": "Confirmar eliminación",
+        "MESSAGE": "¿Está seguro que desea eliminar? ",
+        "YES": "Sí, eliminar ",
         "NO": "No, mantenerlo "
       }
     },
