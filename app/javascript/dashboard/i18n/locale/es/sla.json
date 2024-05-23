@@ -2,7 +2,7 @@
   "SLA": {
     "HEADER": "SLA",
     "ADD_ACTION": "A�adir SLA",
-    "ADD_ACTION_LONG": "Create a new SLA Policy",
+    "ADD_ACTION_LONG": "Crear una nueva política de SLA",
     "DESCRIPTION": "Los Acuerdos de Nivel de Servicio (SLA) son contratos que definen expectativas claras entre su equipo y sus clientes. Establecen normas para los tiempos de respuesta y resoluci�n, creando un marco para la responsabilidad y garantiza una experiencia coherente y de alta calidad.",
     "LEARN_MORE": "M�s informaci�n sobre SLA",
     "LOADING": "Obteniendo SLAs",
@@ -77,7 +77,7 @@
     },
     "ADD": {
       "TITLE": "A�adir SLA",
-      "DESC": "Friendly promises for great service!",
+      "DESC": "¡Promesas amistosas para un excelente servicio!",
       "API": {
         "SUCCESS_MESSAGE": "SLA a�adido correctamente",
         "ERROR_MESSAGE": "Hubo un error, por favor int�ntelo de nuevo"
@@ -98,9 +98,9 @@
     },
     "EVENTS": {
       "TITLE": "SLA Misses",
-      "FRT": "Primera respuesta",
-      "NRT": "Next response time",
-      "RT": "Resolution time",
+      "FRT": "Tiempo primera respuesta",
+      "NRT": "Tiempo siguiente respuesta",
+      "RT": "Tiempo de resolución",
       "SHOW_MORE": "{count} more",
       "HIDE": "Hide {count} rows"
     }
