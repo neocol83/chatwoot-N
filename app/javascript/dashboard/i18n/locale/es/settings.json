@@ -65,7 +65,7 @@
         "NOTE": "Active las notificaciones de sonido en el tablero para los mensajes nuevos y conversaciones.",
         "ALERT_TYPES": {
           "NONE": "Ninguna",
-          "MINE": "Assigned",
+          "MINE": "Asignada",
           "ALL": "Todos"
         },
         "ALERT_TYPE": {
