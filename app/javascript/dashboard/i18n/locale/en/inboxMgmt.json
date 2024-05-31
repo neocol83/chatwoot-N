@@ -24,7 +24,7 @@
         "body": "Add agents to the created inbox."
       },
       {
-        "title": "Voilà!",
+        "title": "Voilï¿½!",
         "route": "settings_inbox_finish",
         "body": "You are all set to go!"
       }
@@ -739,7 +739,7 @@
         "USER_MESSAGE": "Hi",
         "AGENT_MESSAGE": "Hello"
       },
-      "BRANDING_TEXT": "Powered by Chatwoot",
+      "BRANDING_TEXT": "Powered by ChatZi",
       "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {options};"
     },
     "EMAIL_PROVIDERS": {
