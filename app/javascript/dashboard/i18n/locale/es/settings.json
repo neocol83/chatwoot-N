@@ -278,7 +278,7 @@
     "SLA": "SLA",
     "BETA": "Beta",
     "REPORTS_OVERVIEW": "Resumen",
-    "FACEBOOK_REAUTHORIZE": "Su conexión de Facebook expiró, por favor reconecte si página de Facebook para continuar con el servicio",
+    "REAUTHORIZE": "La conexión a tu bandeja de entrada ha caducado. Vuelve a conectarte\n para seguir recibiendo y enviando mensajes.",
     "HELP_CENTER": {
       "TITLE": "Centro de ayuda",
       "ALL_ARTICLES": "Todos los artículos",
