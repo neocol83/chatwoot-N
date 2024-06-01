@@ -53,14 +53,12 @@ import FormInput from '../../../components/Form/Input.vue';
 import SubmitButton from '../../../components/Button/SubmitButton.vue';
 import { DEFAULT_REDIRECT_URL } from 'dashboard/constants/globals';
 import { setNewPassword } from '../../../api/auth';
-import alertMixin from 'shared/mixins/alertMixin';
 
 export default {
   components: {
     FormInput,
     SubmitButton,
   },
-  mixins: [alertMixin],
   props: {
     resetPasswordToken: { type: String, default: '' },
     redirectUrl: { type: String, default: '' },
@@ -107,10 +105,10 @@ export default {
     },
   },
   methods: {
-    showAlertMessage(message) {
+    showAlert(message) {
       // Reset loading, current selected agent
       this.newPasswordAPI.showLoading = false;
-      this.showAlert(message);
+      bus.$emit('newToastMessage', message);
     },
     submitForm() {
       this.newPasswordAPI.showLoading = true;
@@ -124,7 +122,7 @@ export default {
           window.location = DEFAULT_REDIRECT_URL;
         })
         .catch(error => {
-          this.showAlertMessage(
+          this.showAlert(
             error?.message || this.$t('SET_NEW_PASSWORD.API.ERROR_MESSAGE')
           );
         });

@@ -38,10 +38,9 @@ const actions = {
     }
   },
 
-  fetchAllConversations: async ({ commit, state, dispatch }) => {
+  fetchAllConversations: async ({ commit, dispatch }, params) => {
     commit(types.SET_LIST_LOADING_STATUS);
     try {
-      const params = state.conversationFilters;
       const {
         data: { data },
       } = await ConversationApi.get(params);
@@ -446,14 +445,6 @@ const actions = {
 
   clearConversationFilters({ commit }) {
     commit(types.CLEAR_CONVERSATION_FILTERS);
-  },
-
-  setChatListFilters({ commit }, data) {
-    commit(types.SET_CHAT_LIST_FILTERS, data);
-  },
-
-  updateChatListFilters({ commit }, data) {
-    commit(types.UPDATE_CHAT_LIST_FILTERS, data);
   },
 
   assignPriority: async ({ dispatch }, { conversationId, priority }) => {

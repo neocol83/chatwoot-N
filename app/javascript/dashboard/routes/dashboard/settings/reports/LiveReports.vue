@@ -128,7 +128,7 @@ export default {
     this.$store.dispatch('agents/get');
     this.fetchAllData();
 
-    this.$emitter.on('fetch_overview_reports', () => {
+    bus.$on('fetch_overview_reports', () => {
       this.fetchAllData();
     });
   },

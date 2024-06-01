@@ -24,7 +24,4 @@ export const getters = {
   getMeta: $state => {
     return $state.meta;
   },
-  getNotificationFilters($state) {
-    return $state.notificationFilters;
-  },
 };

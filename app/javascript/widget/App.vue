@@ -43,7 +43,6 @@ import {
 } from './constants/widgetBusEvents';
 import darkModeMixin from 'widget/mixins/darkModeMixin';
 import { SDK_SET_BUBBLE_VISIBILITY } from '../shared/constants/sharedFrameEvents';
-import { emitter } from 'shared/helpers/mitt';
 
 export default {
   name: 'App',
@@ -158,36 +157,34 @@ export default {
       }
     },
     registerUnreadEvents() {
-      emitter.on(ON_AGENT_MESSAGE_RECEIVED, () => {
+      bus.$on(ON_AGENT_MESSAGE_RECEIVED, () => {
         const { name: routeName } = this.$route;
         if ((this.isWidgetOpen || !this.isIFrame) && routeName === 'messages') {
           this.$store.dispatch('conversation/setUserLastSeen');
         }
         this.setUnreadView();
       });
-      emitter.on(ON_UNREAD_MESSAGE_CLICK, () => {
+      bus.$on(ON_UNREAD_MESSAGE_CLICK, () => {
         this.replaceRoute('messages').then(() => this.unsetUnreadView());
       });
     },
     registerCampaignEvents() {
-      emitter.on(ON_CAMPAIGN_MESSAGE_CLICK, () => {
+      bus.$on(ON_CAMPAIGN_MESSAGE_CLICK, () => {
         if (this.shouldShowPreChatForm) {
           this.replaceRoute('prechat-form');
         } else {
           this.replaceRoute('messages');
-          emitter.emit('execute-campaign', {
-            campaignId: this.activeCampaign.id,
-          });
+          bus.$emit('execute-campaign', { campaignId: this.activeCampaign.id });
         }
         this.unsetUnreadView();
       });
-      emitter.on('execute-campaign', campaignDetails => {
+      bus.$on('execute-campaign', campaignDetails => {
         const { customAttributes, campaignId } = campaignDetails;
         const { websiteToken } = window.chatwootWebChannel;
         this.executeCampaign({ campaignId, websiteToken, customAttributes });
         this.replaceRoute('messages');
       });
-      emitter.on('snooze-campaigns', () => {
+      bus.$on('snooze-campaigns', () => {
         const expireBy = addHours(new Date(), 1);
         this.campaignsSnoozedTill = Number(expireBy);
       });

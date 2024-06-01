@@ -136,13 +136,12 @@ import Settings from './Settings.vue';
 import adminMixin from '../../../../mixins/isAdmin';
 import accountMixin from '../../../../mixins/account';
 import globalConfigMixin from 'shared/mixins/globalConfigMixin';
-import alertMixin from 'shared/mixins/alertMixin';
 
 export default {
   components: {
     Settings,
   },
-  mixins: [adminMixin, accountMixin, globalConfigMixin, alertMixin],
+  mixins: [adminMixin, accountMixin, globalConfigMixin],
   data() {
     return {
       loading: {},
@@ -195,9 +194,15 @@ export default {
     async deleteInbox({ id }) {
       try {
         await this.$store.dispatch('inboxes/delete', id);
-        this.showAlert(this.$t('INBOX_MGMT.DELETE.API.SUCCESS_MESSAGE'));
+        bus.$emit(
+          'newToastMessage',
+          this.$t('INBOX_MGMT.DELETE.API.SUCCESS_MESSAGE')
+        );
       } catch (error) {
-        this.showAlert(this.$t('INBOX_MGMT.DELETE.API.ERROR_MESSAGE'));
+        bus.$emit(
+          'newToastMessage',
+          this.$t('INBOX_MGMT.DELETE.API.ERROR_MESSAGE')
+        );
       }
     },
 

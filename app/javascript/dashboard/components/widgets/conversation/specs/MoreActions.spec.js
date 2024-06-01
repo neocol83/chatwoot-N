@@ -2,20 +2,11 @@ import { createLocalVue, mount } from '@vue/test-utils';
 import Vuex from 'vuex';
 import VueI18n from 'vue-i18n';
 import VTooltip from 'v-tooltip';
+
 import Button from 'dashboard/components/buttons/Button';
 import i18n from 'dashboard/i18n';
 import FluentIcon from 'shared/components/FluentIcon/DashboardIcon';
 import MoreActions from '../MoreActions';
-
-jest.mock('shared/helpers/mitt', () => ({
-  emitter: {
-    emit: jest.fn(),
-    on: jest.fn(),
-    off: jest.fn(),
-  },
-}));
-
-import { emitter } from 'shared/helpers/mitt';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -24,12 +15,6 @@ localVue.use(VTooltip);
 
 localVue.component('fluent-icon', FluentIcon);
 localVue.component('woot-button', Button);
-
-localVue.prototype.$emitter = {
-  emit: jest.fn(),
-  on: jest.fn(),
-  off: jest.fn(),
-};
 
 const i18nConfig = new VueI18n({ locale: 'en', messages: i18n });
 
@@ -44,6 +29,12 @@ describe('MoveActions', () => {
   let moreActions = null;
 
   beforeEach(() => {
+    window.bus = {
+      $emit: jest.fn(),
+      $on: jest.fn(),
+      $off: jest.fn(),
+    };
+
     state = {
       authenticated: true,
       currentChat,
@@ -85,7 +76,7 @@ describe('MoveActions', () => {
     it('shows alert', async () => {
       await moreActions.find('button:first-child').trigger('click');
 
-      expect(emitter.emit).toBeCalledWith(
+      expect(window.bus.$emit).toBeCalledWith(
         'newToastMessage',
         'This contact is blocked successfully. You will not be notified of any future conversations.',
         undefined
@@ -111,7 +102,7 @@ describe('MoveActions', () => {
     it('shows alert', async () => {
       await moreActions.find('button:first-child').trigger('click');
 
-      expect(emitter.emit).toBeCalledWith(
+      expect(window.bus.$emit).toBeCalledWith(
         'newToastMessage',
         'This contact is unblocked successfully.',
         undefined

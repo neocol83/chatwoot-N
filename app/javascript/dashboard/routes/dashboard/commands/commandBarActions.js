@@ -1,5 +1,4 @@
 import wootConstants from 'dashboard/constants/globals';
-import { emitter } from 'shared/helpers/mitt';
 
 import {
   CMD_MUTE_CONVERSATION,
@@ -27,7 +26,7 @@ export const OPEN_CONVERSATION_ACTIONS = [
     title: 'COMMAND_BAR.COMMANDS.RESOLVE_CONVERSATION',
     section: 'COMMAND_BAR.SECTIONS.CONVERSATION',
     icon: ICON_RESOLVE_CONVERSATION,
-    handler: () => emitter.emit(CMD_RESOLVE_CONVERSATION),
+    handler: () => bus.$emit(CMD_RESOLVE_CONVERSATION),
   },
 ];
 
@@ -38,7 +37,7 @@ export const createSnoozeHandlers = (busEventName, parentId, section) => {
     parent: parentId,
     section: section,
     icon: ICON_SNOOZE_CONVERSATION,
-    handler: () => emitter.emit(busEventName, option),
+    handler: () => bus.$emit(busEventName, option),
   }));
 };
 
@@ -62,7 +61,7 @@ export const RESOLVED_CONVERSATION_ACTIONS = [
     title: 'COMMAND_BAR.COMMANDS.REOPEN_CONVERSATION',
     section: 'COMMAND_BAR.SECTIONS.CONVERSATION',
     icon: ICON_REOPEN_CONVERSATION,
-    handler: () => emitter.emit(CMD_REOPEN_CONVERSATION),
+    handler: () => bus.$emit(CMD_REOPEN_CONVERSATION),
   },
 ];
 
@@ -71,7 +70,7 @@ export const SEND_TRANSCRIPT_ACTION = {
   title: 'COMMAND_BAR.COMMANDS.SEND_TRANSCRIPT',
   section: 'COMMAND_BAR.SECTIONS.CONVERSATION',
   icon: ICON_SEND_TRANSCRIPT,
-  handler: () => emitter.emit(CMD_SEND_TRANSCRIPT),
+  handler: () => bus.$emit(CMD_SEND_TRANSCRIPT),
 };
 
 export const UNMUTE_ACTION = {
@@ -79,7 +78,7 @@ export const UNMUTE_ACTION = {
   title: 'COMMAND_BAR.COMMANDS.UNMUTE_CONVERSATION',
   section: 'COMMAND_BAR.SECTIONS.CONVERSATION',
   icon: ICON_UNMUTE_CONVERSATION,
-  handler: () => emitter.emit(CMD_UNMUTE_CONVERSATION),
+  handler: () => bus.$emit(CMD_UNMUTE_CONVERSATION),
 };
 
 export const MUTE_ACTION = {
@@ -87,5 +86,5 @@ export const MUTE_ACTION = {
   title: 'COMMAND_BAR.COMMANDS.MUTE_CONVERSATION',
   section: 'COMMAND_BAR.SECTIONS.CONVERSATION',
   icon: ICON_MUTE_CONVERSATION,
-  handler: () => emitter.emit(CMD_MUTE_CONVERSATION),
+  handler: () => bus.$emit(CMD_MUTE_CONVERSATION),
 };

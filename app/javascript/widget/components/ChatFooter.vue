@@ -147,12 +147,12 @@ export default {
       if (this.hasEmail) {
         try {
           await sendEmailTranscript();
-          this.$emitter.emit(BUS_EVENTS.SHOW_ALERT, {
+          window.bus.$emit(BUS_EVENTS.SHOW_ALERT, {
             message: this.$t('EMAIL_TRANSCRIPT.SEND_EMAIL_SUCCESS'),
             type: 'success',
           });
         } catch (error) {
-          this.$emitter.$emit(BUS_EVENTS.SHOW_ALERT, {
+          window.bus.$emit(BUS_EVENTS.SHOW_ALERT, {
             message: this.$t('EMAIL_TRANSCRIPT.SEND_EMAIL_ERROR'),
           });
         }

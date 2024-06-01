@@ -83,7 +83,6 @@ import WootSubmitButton from '../../../../components/buttons/FormSubmitButton.vu
 import Modal from '../../../../components/Modal.vue';
 import Auth from '../../../../api/auth';
 import wootConstants from 'dashboard/constants/globals';
-import alertMixin from 'shared/mixins/alertMixin';
 
 const { AVAILABILITY_STATUS_KEYS } = wootConstants;
 
@@ -92,7 +91,6 @@ export default {
     WootSubmitButton,
     Modal,
   },
-  mixins: [alertMixin],
   props: {
     id: {
       type: Number,
@@ -171,6 +169,9 @@ export default {
     },
   },
   methods: {
+    showAlert(message) {
+      bus.$emit('newToastMessage', message);
+    },
     async editAgent() {
       try {
         await this.$store.dispatch('agents/update', {

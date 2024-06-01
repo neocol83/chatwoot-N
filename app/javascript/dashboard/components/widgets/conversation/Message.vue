@@ -476,11 +476,11 @@ export default {
   },
   mounted() {
     this.hasMediaLoadError = false;
-    this.$emitter.on(BUS_EVENTS.ON_MESSAGE_LIST_SCROLL, this.closeContextMenu);
+    bus.$on(BUS_EVENTS.ON_MESSAGE_LIST_SCROLL, this.closeContextMenu);
     this.setupHighlightTimer();
   },
   beforeDestroy() {
-    this.$emitter.off(BUS_EVENTS.ON_MESSAGE_LIST_SCROLL, this.closeContextMenu);
+    bus.$off(BUS_EVENTS.ON_MESSAGE_LIST_SCROLL, this.closeContextMenu);
     clearTimeout(this.higlightTimeout);
   },
   methods: {
@@ -534,7 +534,7 @@ export default {
       const { conversation_id: conversationId, id: replyTo } = this.data;
 
       LocalStorage.updateJsonStore(replyStorageKey, conversationId, replyTo);
-      this.$emitter.emit(BUS_EVENTS.TOGGLE_REPLY_TO_MESSAGE, this.data);
+      bus.$emit(BUS_EVENTS.TOGGLE_REPLY_TO_MESSAGE, this.data);
     },
     setupHighlightTimer() {
       if (Number(this.$route.query.messageId) !== Number(this.data.id)) {
@@ -549,7 +549,7 @@ export default {
     },
     async navigateToMessage() {
       this.$nextTick(() => {
-        this.$emitter.emit(BUS_EVENTS.SCROLL_TO_MESSAGE, {
+        bus.$emit(BUS_EVENTS.SCROLL_TO_MESSAGE, {
           messageId: this.inReplyToMessageId,
         });
       });

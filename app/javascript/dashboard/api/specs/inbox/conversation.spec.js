@@ -46,7 +46,6 @@ describe('#ConversationAPI', () => {
         page: 1,
         labels: [],
         teamId: 1,
-        updatedWithin: 20,
       });
       expect(axiosMock.get).toHaveBeenCalledWith('/api/v1/conversations', {
         params: {
@@ -56,7 +55,6 @@ describe('#ConversationAPI', () => {
           assignee_type: 'me',
           page: 1,
           labels: [],
-          updated_within: 20,
         },
       });
     });

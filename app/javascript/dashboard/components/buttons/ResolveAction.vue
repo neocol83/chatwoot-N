@@ -128,12 +128,12 @@ export default {
     },
   },
   mounted() {
-    this.$emitter.on(CMD_REOPEN_CONVERSATION, this.onCmdOpenConversation);
-    this.$emitter.on(CMD_RESOLVE_CONVERSATION, this.onCmdResolveConversation);
+    bus.$on(CMD_REOPEN_CONVERSATION, this.onCmdOpenConversation);
+    bus.$on(CMD_RESOLVE_CONVERSATION, this.onCmdResolveConversation);
   },
   destroyed() {
-    this.$emitter.off(CMD_REOPEN_CONVERSATION, this.onCmdOpenConversation);
-    this.$emitter.off(CMD_RESOLVE_CONVERSATION, this.onCmdResolveConversation);
+    bus.$off(CMD_REOPEN_CONVERSATION, this.onCmdOpenConversation);
+    bus.$off(CMD_RESOLVE_CONVERSATION, this.onCmdResolveConversation);
   },
   methods: {
     getKeyboardEvents() {

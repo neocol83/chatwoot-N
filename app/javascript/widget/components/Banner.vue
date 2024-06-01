@@ -8,7 +8,6 @@
 
 <script>
 import { BUS_EVENTS } from 'shared/constants/busEvents';
-import { emitter } from 'shared/helpers/mitt';
 
 export default {
   data() {
@@ -19,7 +18,7 @@ export default {
     };
   },
   mounted() {
-    emitter.on(BUS_EVENTS.SHOW_ALERT, ({ message, type = 'error' }) => {
+    bus.$on(BUS_EVENTS.SHOW_ALERT, ({ message, type = 'error' }) => {
       this.bannerMessage = message;
       this.bannerType = type;
       this.showBannerMessage = true;

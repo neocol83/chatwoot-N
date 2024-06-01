@@ -110,11 +110,11 @@ export default {
   mounted() {
     this.handleResize();
     window.addEventListener('resize', this.handleResize);
-    this.$emitter.on(BUS_EVENTS.TOGGLE_SIDEMENU, this.toggleSidebar);
+    bus.$on(BUS_EVENTS.TOGGLE_SIDEMENU, this.toggleSidebar);
   },
   beforeDestroy() {
     window.removeEventListener('resize', this.handleResize);
-    this.$emitter.off(BUS_EVENTS.TOGGLE_SIDEMENU, this.toggleSidebar);
+    bus.$off(BUS_EVENTS.TOGGLE_SIDEMENU, this.toggleSidebar);
   },
 
   methods: {

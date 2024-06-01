@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 import NotificationSubscriptions from '../api/notificationSubscription';
 import auth from '../api/auth';
-import { emitter } from 'shared/helpers/mitt';
 
 export const verifyServiceWorkerExistence = (callback = () => {}) => {
   if (!('serviceWorker' in navigator)) {
@@ -69,7 +68,7 @@ export const registerSubscription = (onSuccess = () => {}) => {
       onSuccess();
     })
     .catch(() => {
-      emitter.emit(
+      window.bus.$emit(
         'newToastMessage',
         'This browser does not support desktop notification'
       );
@@ -78,7 +77,7 @@ export const registerSubscription = (onSuccess = () => {}) => {
 
 export const requestPushPermissions = ({ onSuccess }) => {
   if (!('Notification' in window)) {
-    emitter.emit(
+    window.bus.$emit(
       'newToastMessage',
       'This browser does not support desktop notification'
     );

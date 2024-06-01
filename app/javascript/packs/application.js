@@ -15,8 +15,6 @@ import WootUiKit from '../dashboard/components';
 import App from '../dashboard/App';
 import i18n from '../dashboard/i18n';
 import createAxios from '../dashboard/helper/APIHelper';
-import { emitter } from '../shared/helpers/mitt';
-
 import commonHelpers, { isJSONValid } from '../dashboard/helper/commons';
 import router, { initalizeRouter } from '../dashboard/routes';
 import store from '../dashboard/store';
@@ -95,8 +93,7 @@ commonHelpers();
 
 window.WootConstants = constants;
 window.axios = createAxios(axios);
-Vue.prototype.$emitter = emitter;
-
+window.bus = new Vue();
 initializeChatwootEvents();
 initializeAnalyticsEvents();
 initalizeRouter();

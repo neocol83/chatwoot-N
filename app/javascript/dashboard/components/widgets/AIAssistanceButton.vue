@@ -81,7 +81,7 @@ export default {
   },
 
   mounted() {
-    this.$emitter.on(CMD_AI_ASSIST, this.onAIAssist);
+    bus.$on(CMD_AI_ASSIST, this.onAIAssist);
     this.initialMessage = this.draftMessage;
   },
 

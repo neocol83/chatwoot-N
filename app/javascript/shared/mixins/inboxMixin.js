@@ -44,9 +44,6 @@ export default {
     whatsAppAPIProvider() {
       return this.inbox.provider || '';
     },
-    isAMicrosoftInbox() {
-      return this.isAnEmailChannel && this.inbox.provider === 'microsoft';
-    },
     isAPIInbox() {
       return this.channelType === INBOX_TYPES.API;
     },
