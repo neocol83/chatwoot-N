@@ -1,27 +1,41 @@
-#Files in the config/locales directory are used for internationalization
-#and are automatically loaded by Rails. If you want to use locales other
-#than English, add the necessary files in this directory.
-#To use the locales, use `I18n.t`:
-#I18n.t 'hello'
-#In views, this is aliased to just `t`:
-#<%= t('hello') %>
-#To use a different locale, set it with `I18n.locale`:
-#I18n.locale = :es
-#This would use the information in config/locales/es.yml.
-#The following keys must be escaped otherwise they will not be retrieved by
-#the default I18n backend:
-#true, false, on, off, yes, no
-#Instead, surround them with single quotes.
-#en:
-#'true': 'foo'
-#To learn more, please read the Rails Internationalization guide
-#available at https://guides.rubyonrails.org/i18n.html.
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
 es:
   hello: "Hola mundo"
   messages:
     reset_password_success: '¡Genial! La solicitud de restablecimiento de contraseña ha sido exitosa. Revisa tu correo para ver las instrucciones.'
     reset_password_failure: '¡Uh ho! No hemos podido encontrar ningún usuario con el correo electrónico especificado.'
     inbox_deletetion_response: Su solicitud de eliminación de la bandeja de entrada será procesada en algún tiempo.
+    
   errors:
     validations:
       presence: no debe estar en blanco
@@ -116,6 +130,7 @@ es:
         rating: Calificación
         feedback: Comentario de opinión
         recorded_at: Fecha registrada
+        
   notifications:
     notification_title:
       conversation_creation: "Una conversación (#%{display_id}) ha sido creada en %{inbox_name}"
@@ -209,6 +224,9 @@ es:
     openai:
       name: "OpenAI"
       description: "Integra poderosas características de IA en Chatwoot aprovechando los modelos GPT de OpenAI."
+	linear:
+      name: "Linear"
+      description: "Create Linear issues from conversations, or link existing ones for seamless tracking."
   public_portal:
     search:
       search_placeholder: Buscar artículo por título o cuerpo...
