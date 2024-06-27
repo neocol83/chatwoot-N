@@ -218,7 +218,7 @@
           "TWILIO": "Twilio",
           "WHATSAPP_CLOUD": "Nube de WhatsApp",
           "360_DIALOG": "360 Diálogo",
-          "UNOAPI": "Unoapi"
+          "UNOAPI": "ChatZiapi"
         },
         "INBOX_NAME": {
           "LABEL": "Nombre de la bandeja de entrada",
@@ -226,24 +226,24 @@
           "ERROR": "Este campo es obligatorio"
         },
         "SEND_AGENT_NAME": {
-          "LABEL": "Send agent name",
-          "PLACEHOLDER": "Check to send agent name.",
-          "ERROR": "Check to send agent name."
+          "LABEL": "Enviar nombre del agente",
+          "PLACEHOLDER": "Marque para enviar el nombre del agente.",
+          "ERROR": "Marque para enviar el nombre del agente."
         },
         "IGNORE_HISTORY": {
-          "LABEL": "Ignore history on connect",
-          "PLACEHOLDER": "Check to ignore history on connect.",
-          "ERROR": "Check to ignore history on connect."
+          "LABEL": "Ignorar el historial al conectar",
+          "PLACEHOLDER": "Marque para ignorar el historial al conectarse.",
+          "ERROR": "Marque para ignorar el historial al conectarse."
         },
         "IGNORE_GROUPS": {
-          "LABEL": "Ignore groups messages",
-          "PLACEHOLDER": "Check to ignore groups messages.",
-          "ERROR": "Check to ignore groups messages."
+          "LABEL": "Ignorar mensajes de grupos",
+          "PLACEHOLDER": "Marque para ignorar los mensajes de los grupos.",
+          "ERROR": "Marque para ignorar los mensajes de los grupos."
         },
         "URL": {
-          "LABEL": "Unoapi URL",
-          "PLACEHOLDER": "Por favor ingrese una URL de Unoapi",
-          "ERROR": "This field is required"
+          "LABEL": "ChatZiapi URL",
+          "PLACEHOLDER": "Por favor ingrese una URL de ChatZiapi",
+          "ERROR": "Este campo es obligatorio"
         },
         "PHONE_NUMBER": {
           "LABEL": "Número de teléfono",
@@ -519,7 +519,7 @@
       "BUSINESS_HOURS": "Horarios",
       "WIDGET_BUILDER": "Constructor de Widget",
       "BOT_CONFIGURATION": "Configuración del bot",
-      "UNOAPI_CONFIGURATION": "Unoapi Configuration" 
+      "UNOAPI_CONFIGURATION": "ChatZiapi Configuration" 
     },
     "SETTINGS": "Ajustes",
     "FEATURES": {

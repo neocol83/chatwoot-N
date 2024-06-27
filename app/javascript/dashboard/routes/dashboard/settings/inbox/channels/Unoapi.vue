@@ -127,7 +127,7 @@ export default {
       inboxName: '',
       phoneNumber: '',
       apiKey: '',
-      url: 'https://unoapi.cloud',
+      url: 'https://chatziapi.atresclick.com',
       ignoreGroupMessages: true,
       ignoreHistoryMessages: true,
       sendAgentName: true,
