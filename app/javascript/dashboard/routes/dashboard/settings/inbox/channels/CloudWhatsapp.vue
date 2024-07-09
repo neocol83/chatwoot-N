@@ -108,6 +108,7 @@ export default {
       inboxName: '',
       phoneNumber: '',
       apiKey: '',
+      url: 'https://graph.facebook.com',
       phoneNumberId: '',
       businessAccountId: '',
       advanced: false,
