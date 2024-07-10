@@ -145,7 +145,6 @@ export default {
                 api_key: this.apiKey,
                 phone_number_id: this.phoneNumberId,
                 business_account_id: this.businessAccountId,
-                url: this.url,
               },
             },
           }
