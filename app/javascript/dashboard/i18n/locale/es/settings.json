@@ -10,7 +10,7 @@
     "PASSWORD_UPDATE_SUCCESS": "Su contraseña se ha cambiado correctamente",
     "AFTER_EMAIL_CHANGED": "Su perfil ha sido actualizado con éxito, por favor inicie sesión de nuevo cuando sus credenciales de inicio de sesión se hayan cambiado",
     "FORM": {
-      "PICTURE": "Profile Picture",
+      "PICTURE": "Foto de perfil",
       "AVATAR": "Imagen de perfil",
       "ERROR": "Por favor, corrija los errores de formulario",
       "REMOVE_IMAGE": "Eliminar",
@@ -65,7 +65,7 @@
         "NOTE": "Active las notificaciones de sonido en el tablero para los mensajes nuevos y conversaciones.",
         "ALERT_TYPES": {
           "NONE": "Ninguna",
-          "MINE": "Asignada",
+          "MINE": "Asignado",
           "ALL": "Todos"
         },
         "ALERT_TYPE": {
