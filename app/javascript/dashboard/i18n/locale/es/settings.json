@@ -145,11 +145,7 @@
       },
       "AVAILABILITY": {
         "LABEL": "Disponibilidad",
-        "STATUSES_LIST": [
-          "En línea",
-          "Ocupado",
-          "Fuera de línea"
-        ],
+        "STATUSES_LIST": ["En línea", "Ocupado", "Fuera de línea"],
         "SET_AVAILABILITY_SUCCESS": "La disponibilidad se ha establecido con éxito",
         "SET_AVAILABILITY_ERROR": "No se pudo establecer la disponibilidad, inténtelo de nuevo"
       },
@@ -349,8 +345,8 @@
       "TOGGLE_SNOOZE_DROPDOWN": "Cambiar el menú desplegable"
     },
     "KEYS": {
-      "WINDOWS_KEY_AND_COMMAND_KEY": "Windows / ⌘",
-      "ALT_OR_OPTION_KEY": "Alt \\ ⌥",
+      "WINDOWS_KEY_AND_COMMAND_KEY": "Win / ⌘",
+      "ALT_OR_OPTION_KEY": "Alt / ⌥",
       "FORWARD_SLASH_KEY": "/"
     }
   }
