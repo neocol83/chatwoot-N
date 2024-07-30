@@ -240,6 +240,11 @@
           "PLACEHOLDER": "Check to ignore history on connect.",
           "ERROR": "Check to webhook send new messages."
         },
+        "WEBWOOK_SEND_NEW_MESSAGES": {
+          "LABEL": "Webhook send new messages",
+          "PLACEHOLDER": "Check to ignore history on connect.",
+          "ERROR": "Check to webhook send new messages."
+        },
         "IGNORE_GROUPS": {
           "LABEL": "Ignorar mensajes de grupos",
           "PLACEHOLDER": "Marque para ignorar los mensajes de los grupos.",
