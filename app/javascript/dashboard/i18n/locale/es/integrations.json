@@ -1,7 +1,7 @@
 {
   "INTEGRATION_SETTINGS": {
     "HEADER": "Integrations",
-    "DESCRIPTION": "%{installationName} se integra con múltiples herramientas y servicios para mejorar la eficiencia de su equipo. Explora la lista a continuación para configurar tus aplicaciones favoritas.",
+    "DESCRIPTION": " %{installationName} se integra con múltiples herramientas y servicios para mejorar la eficiencia de su equipo. Explora la lista a continuación para configurar tus aplicaciones favoritas.",
     "LEARN_MORE": "Más información sobre integraciones",
     "LOADING": "Obteniendo integraciones",
     "WEBHOOK": {
