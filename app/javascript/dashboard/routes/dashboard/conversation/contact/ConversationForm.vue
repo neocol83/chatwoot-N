@@ -285,6 +285,10 @@ export default {
       type: Function,
       default: () => {},
     },
+    channelType: {
+      type: String,
+      default: '',
+    },
   },
   setup() {
     const { fetchSignatureFlagFromUISettings, setSignatureFlagForInbox } =
