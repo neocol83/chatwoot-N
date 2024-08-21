@@ -32,7 +32,7 @@ jobs:
 
       - name: set docker tag
         run: |
-          echo "DOCKER_ARM_TAG=neocol83/chatwoot-arm:$GIT_REF" >> $GITHUB_ENV
+          echo "DOCKER_TAG=neocol83/chatwoot-arm:$GIT_REF" >> $GITHUB_ENV
 
       - name: replace docker tag if master
         if: github.ref_name == 'master'
