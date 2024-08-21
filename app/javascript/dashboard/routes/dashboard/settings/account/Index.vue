@@ -237,8 +237,8 @@ export default {
               @blur="v$.autoResolveDuration.$touch"
             />
             <select v-model="autoResolveUnit">
-              <option value="hours">{{ $t('GENERAL_SETTINGS.FORM.AUTO_RESOLVE_DURATION.UNIT_HOURS') }}</option>
-              <option value="days">{{ $t('GENERAL_SETTINGS.FORM.AUTO_RESOLVE_DURATION.UNIT_DAYS') }}</option>
+              <option value="hours">{{ $t('GENERAL_SETTINGS.FORM.UNIT.HOURS') }}</option>
+              <option value="days">{{ $t('GENERAL_SETTINGS.FORM.UNIT.DAYS') }}</option>
             </select>
             <span v-if="v$.autoResolveDuration.$error" class="message">
               {{ $t('GENERAL_SETTINGS.FORM.AUTO_RESOLVE_DURATION.ERROR') }}
