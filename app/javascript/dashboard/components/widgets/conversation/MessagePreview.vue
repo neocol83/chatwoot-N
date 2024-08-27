@@ -1,11 +1,17 @@
 <script>
 import { MESSAGE_TYPE } from 'widget/helpers/constants';
-import messageFormatterMixin from 'shared/mixins/messageFormatterMixin';
+import { useMessageFormatter } from 'shared/composables/useMessageFormatter';
 import { ATTACHMENT_ICONS } from 'shared/constants/messages';
 
 export default {
   name: 'MessagePreview',
-  mixins: [messageFormatterMixin],
+  components: {
+    BubbleImageAudioVideo,
+    InstagramStory,
+    BubbleLocation,
+    BubbleContact,
+    BubbleFile,
+  },
   props: {
     message: {
       type: Object,
@@ -19,6 +25,17 @@ export default {
       type: String,
       default: '',
     },
+  },
+  setup() {
+    const { getPlainText } = useMessageFormatter();
+    return {
+      getPlainText,
+    };
+  },
+  data: () => {
+    return {
+      previewMessage: null,
+    };
   },
   computed: {
     messageByAgent() {
