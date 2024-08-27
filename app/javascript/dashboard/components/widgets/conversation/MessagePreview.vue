@@ -17,7 +17,6 @@ export default {
     BubbleContact,
     BubbleFile,
   },
-  mixins: [messageFormatterMixin],
   props: {
     message: {
       type: Object,
@@ -31,6 +30,12 @@ export default {
       type: String,
       default: '',
     },
+  },
+  setup() {
+    const { getPlainText } = useMessageFormatter();
+    return {
+      getPlainText,
+    };
   },
   data: () => {
     return {
