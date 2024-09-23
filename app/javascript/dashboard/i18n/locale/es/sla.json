@@ -26,11 +26,11 @@
         "TITLE_2": "Enterprise P1",
         "DESC_2": "Problemas planteados por clientes empresariales que deben reconocerse rápidamente."
       },
-      "BUSINESS_HOURS_ON": "Horas laborables",
-      "BUSINESS_HOURS_OFF": "Horas de descanso",
+      "BUSINESS_HOURS_ON": "Horas de negocio activas",
+      "BUSINESS_HOURS_OFF": "Horas de negocio inactivas",
       "RESPONSE_TYPES": {
         "FRT": "Umbral de tiempo de primera respuesta",
-        "NRT": "Umbral de tiempo de siguiente respuesta",
+        "NRT": "Umbral de tiempo de próxima respuesta",
         "RT": "Umbral de tiempo de resolución",
         "SHORT_HAND": {
           "FRT": "FRT",
@@ -41,31 +41,31 @@
     },
     "FORM": {
       "NAME": {
-        "LABEL": "Nombre de SLA",
-        "PLACEHOLDER": "Nombre de SLA",
-        "REQUIRED_ERROR": "El nombre de SLA es requerido",
-        "MINIMUM_LENGTH_ERROR": "La longitud mínima es de 2 caracteres",
-        "VALID_ERROR": "Sólo letras, números, guión y guión bajo son permitidos"
+        "LABEL": "Nombre del SLA",
+        "PLACEHOLDER": "Nombre del SLA",
+        "REQUIRED_ERROR": "El nombre del SLA es obligatorio",
+        "MINIMUM_LENGTH_ERROR": "Se requiere una longitud mínima de 2",
+        "VALID_ERROR": "Solo se permiten letras, números, guiones y guiones bajos"
       },
       "DESCRIPTION": {
         "LABEL": "Descripción",
         "PLACEHOLDER": "SLA para clientes premium"
       },
       "FIRST_RESPONSE_TIME": {
-        "LABEL": "Tiempo de primera respuesta",
+        "LABEL": "Tiempo de Primera Respuesta",
         "PLACEHOLDER": "5"
       },
       "NEXT_RESPONSE_TIME": {
-        "LABEL": "Próximo tiempo de respuesta",
+        "LABEL": "Tiempo de Próxima Respuesta",
         "PLACEHOLDER": "5"
       },
       "RESOLUTION_TIME": {
-        "LABEL": "Tiempo de resolución",
+        "LABEL": "Tiempo de Resolución",
         "PLACEHOLDER": "60"
       },
       "BUSINESS_HOURS": {
-        "LABEL": "Horarios",
-        "PLACEHOLDER": "Sólo durante las horas de trabajo"
+        "LABEL": "Horas de Negocio",
+        "PLACEHOLDER": "Solo durante horas de negocio"
       },
       "THRESHOLD_TIME": {
         "INVALID_FORMAT_ERROR": "El umbral debe ser un número y mayor que cero"
@@ -79,21 +79,21 @@
       "TITLE": "Añadir SLA",
       "DESC": "¡Promesas amistosas para un excelente servicio!",
       "API": {
-        "SUCCESS_MESSAGE": "SLA añadido correctamente",
-        "ERROR_MESSAGE": "Hubo un error, por favor inténtelo de nuevo"
+        "SUCCESS_MESSAGE": "SLA agregado exitosamente",
+        "ERROR_MESSAGE": "Hubo un error, por favor intente nuevamente"
       }
     },
     "DELETE": {
       "TITLE": "Eliminar SLA",
       "API": {
-        "SUCCESS_MESSAGE": "SLA eliminado correctamente",
-        "ERROR_MESSAGE": "Hubo un error, por favor inténtelo de nuevo"
+        "SUCCESS_MESSAGE": "SLA eliminado exitosamente",
+        "ERROR_MESSAGE": "Hubo un error, por favor intente nuevamente"
       },
       "CONFIRM": {
-        "TITLE": "Confirmar eliminación",
-        "MESSAGE": "¿Está seguro que desea eliminar? ",
-        "YES": "Sí, eliminar ",
-        "NO": "No, mantenerlo "
+        "TITLE": "Confirmar Eliminación",
+        "MESSAGE": "¿Está seguro de que desea eliminar ",
+        "YES": "Sí, Eliminar ",
+        "NO": "No, Conservar "
       }
     },
     "EVENTS": {
