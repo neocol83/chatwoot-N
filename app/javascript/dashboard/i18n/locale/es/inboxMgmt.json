@@ -588,7 +588,9 @@
       "AGENT_PERMISSIONS": "Permisos del agente",
       "AGENT_PERMISSIONS_SUB_TEXT": "Actualizar permisos de agente para esta bandeja de entrada",
       "AGENT_ALLOW_TO_DELETE_MESSAGE": "Permitir que un agente elimine un mensaje",
-      "AGENT_ALLOW_TO_DELETE_MESSAGE_SUB_TEXT": "Permitir que un agente elimine un mensaje de una conversación."
+      "AGENT_ALLOW_TO_DELETE_MESSAGE_SUB_TEXT": "Permitir que un agente elimine un mensaje de una conversación.",
+      "EXTERNAL_TOKEN": "Token Wavoip",
+      "EXTERNAL_TOKEN_PLACEHOLDER": "Introduzca el token de Wavoip"
     },
     "HELP_CENTER": {
       "LABEL": "Centro de ayuda",
