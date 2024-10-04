@@ -11,6 +11,7 @@ on:
       - develop
       - master
       - team
+      - kanban
     tags:
       - v*
   workflow_dispatch:
