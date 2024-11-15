@@ -228,9 +228,11 @@
         "CONTACT-NAME": "Contacto",
         "CONTACT-PHONE": "Teléfono",
         "CONTACT-DATE": "Última actividad",
-        "SHARE": "Compartir",
-        "BUTTOM": "Compartiendo mensaje..."
-      }
+        "SHARE": "Compartir"
+      },
+      "MESSAGES": {
+        "SHARE_SUCCESS": "Compartiendo mensaje..."
+      }      
     }
   },
   "EMAIL_TRANSCRIPT": {

@@ -11,7 +11,7 @@
           </div>
           <div class="forward__contacts">
               <div class="forward__contacts-search">
-                  <label for="Procurar um contato">{{ $t('CONVERSATION.FORWARDMODAL.TITLE.SEARCH') }}</label>
+                  <label for="contact-search">{{ $t('CONVERSATION.FORWARDMODAL.TITLE.SEARCH') }}</label>
                   <div>
                       <input
                           type="search"
@@ -145,7 +145,7 @@ export default {
               messageId: this.message.id,
               contacts: contactIds
           });
-          useAlert(this.$t('CONVERSATION.FORWARDMODAL.TITLE.BUTTOM'));
+          useAlert(this.$t('CONVERSATION.FORWARDMODAL.MESSAGES.SHARE_SUCCESS'));
           this.onClose();
       }
   }
