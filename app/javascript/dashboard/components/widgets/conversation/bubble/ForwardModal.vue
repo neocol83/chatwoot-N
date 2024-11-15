@@ -6,12 +6,12 @@
   >
       <div class="forward">
           <div class="forward__title">
-              <h1 class="forward__title-primary">Compartilhar mensagem</h1>
-              <p>Compartilhe a mensagem com seus contatos do Converx</p>
+              <h1 class="forward__title-primary">{{ $t('CONVERSATION.FORWARDMODAL.TITLE.PRIMARY') }}</h1>
+              <p>{{ $t('CONVERSATION.FORWARDMODAL.TITLE.DESCRIPTION') }}</p>
           </div>
           <div class="forward__contacts">
               <div class="forward__contacts-search">
-                  <label for="Procurar um contato">Procurar um contato</label>
+                  <label for="Procurar um contato">{{ $t('CONVERSATION.FORWARDMODAL.TITLE.SEARCH') }}</label>
                   <div>
                       <input
                           type="search"
@@ -28,9 +28,9 @@
                   <div class="forward__contacts-list">
                       <div class="contact contact-columns">
                           <div class="contact-id">&nbsp;</div>
-                          <div class="contact-name">Contato</div>
-                          <div class="contact-phone">Telefone</div>
-                          <div class="contact-date">Última Atividade</div>
+                          <div class="contact-name">{{ $t('CONVERSATION.FORWARDMODAL.TITLE.CONTACT-NAME') }}</div>
+                          <div class="contact-phone">{{ $t('CONVERSATION.FORWARDMODAL.TITLE.CONTACT-PHONE') }}</div>
+                          <div class="contact-date">{{ $t('CONVERSATION.FORWARDMODAL.TITLE.CONTACT-DATE') }}</div>
                       </div>
                       <div class="contacts">
                         <div class="contact" v-for="contact in contacts" :key="contact.id">
@@ -54,7 +54,7 @@
                       </div>
                   </div>
                   <div class="forward__contacts-footer">
-                      <woot-button :disabled="showEmptySearchResult">Encaminhar</woot-button>
+                      <woot-button :disabled="showEmptySearchResult">{{ $t('CONVERSATION.FORWARDMODAL.TITLE.SHARE') }}</woot-button>
                   </div>
               </form>
           </div>
@@ -145,7 +145,7 @@ export default {
               messageId: this.message.id,
               contacts: contactIds
           });
-          useAlert("Encaminhando mensagem...");
+          useAlert(this.$t('CONVERSATION.FORWARDMODAL.TITLE.BUTTOM'));
           this.onClose();
       }
   }

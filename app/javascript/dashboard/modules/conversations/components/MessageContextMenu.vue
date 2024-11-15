@@ -255,7 +255,7 @@ export default {
         <menu-item
           :option="{
             icon: 'share',
-            label: 'Encaminhar',
+            label: $t('CONVERSATION.CONTEXT_MENU.SHARE'),
           }"
           variant="icon"
           @click="handleForward"
