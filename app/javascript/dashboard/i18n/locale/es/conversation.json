@@ -210,6 +210,7 @@
       "DELETE": "Eliminar",
       "CREATE_A_CANNED_RESPONSE": "Agregar a respuestas predefinidas",
       "TRANSLATE": "Traducir",
+      "SHARE":"Compartir",
       "COPY_PERMALINK": "Copiar enlace al mensaje",
       "LINK_COPIED": "URL del mensaje copiada al portapapeles",
       "DELETE_CONFIRMATION": {
@@ -217,6 +218,18 @@
         "MESSAGE": "No puedes deshacer esta acción",
         "DELETE": "Eliminar",
         "CANCEL": "Cancelar"
+      }
+    },
+    "FORWARDMODAL": {
+      "TITLE": {
+        "PRIMARY": "Compartir mensaje",
+        "DESCRIPTION": "Compartir un mensaje con sus contactos de conversación",
+        "SEARCH": "Buscar un contacto",
+        "CONTACT-NAME": "Contacto",
+        "CONTACT-PHONE": "Teléfono",
+        "CONTACT-DATE": "Última actividad",
+        "SHARE": "Compartir",
+        "BUTTOM": "Compartiendo mensaje..."
       }
     }
   },
