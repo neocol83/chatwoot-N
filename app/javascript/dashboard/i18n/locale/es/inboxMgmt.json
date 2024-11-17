@@ -12,7 +12,7 @@
       {
         "title": "Elige Canal",
         "route": "settings_inbox_new",
-        "body": "Elija el proveedor que desea integrar con Chatwoot."
+        "body": "Elija el proveedor que desea integrar con ChatZi."
       },
       {
         "title": "Crear Bandeja de Entrada",
@@ -452,7 +452,7 @@
       },
       "AUTH": {
         "TITLE": "Elige un canal",
-        "DESC": "Chatwoot admite widgets de chat en vivo, Facebook Messenger, WhatsApp, correos electrónicos, etc., como canales. "
+        "DESC": "ChatZi admite widgets de chat en vivo, Facebook Messenger, WhatsApp, correos electrónicos, etc., como canales. "
       },
       "AGENTS": {
         "TITLE": "Agentes",
@@ -462,11 +462,11 @@
       },
       "DETAILS": {
         "TITLE": "Detalles de la bandeja de entrada",
-        "DESC": "En el menú desplegable a continuación, seleccione la página de Facebook que desea conectar a Chatwoot. "
+        "DESC": "En el menú desplegable a continuación, seleccione la página de Facebook que desea conectar a ChatZi. "
       },
       "FINISH": {
         "TITLE": "¡Lo superó!",
-        "DESC": "Ha terminado con éxito la integración de su página de Facebook con Chatwoot. <br>También le proporcionamos un script de widget que puede agregar fácilmente a su sitio web. <br>Genial, ¿eh? "
+        "DESC": "Ha terminado con éxito la integración de su página de Facebook con ChatZi. <br>También le proporcionamos un script de widget que puede agregar fácilmente a su sitio web. <br>Genial, ¿eh? "
       },
       "EMAIL_PROVIDER": {
         "TITLE": "Seleccione su proveedor de correo electrónico",
@@ -865,7 +865,7 @@
         "USER_MESSAGE": "Hola",
         "AGENT_MESSAGE": "Hola"
       },
-      "BRANDING_TEXT": "Desarrollado por Chatwoot",
+      "BRANDING_TEXT": "Desarrollado por ChatZi",
       "SCRIPT_SETTINGS": "\n      window.chatwootSettings = {opciones};"
     },
     "EMAIL_PROVIDERS": {
