@@ -46,10 +46,6 @@
       "FEATURES": {
         "INBOUND_EMAIL_ENABLED": "La continuidad de la conversación con correos electrónicos está habilitada para tu cuenta.",
         "CUSTOM_EMAIL_DOMAIN_ENABLED": "Ahora puedes recibir correos electrónicos en tu dominio personalizado."
-      },
-      "UNIT": {
-        "HOURS": "Horas",
-        "DAYS": "Días"
       }
     },
     "UPDATE_CHATWOOT": "Una actualización %{latestChatwootVersion} para Chatwoot está disponible. Por favor, actualiza tu instancia.",
