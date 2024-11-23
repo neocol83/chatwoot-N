@@ -386,7 +386,7 @@
         "SLUG": {
           "LABEL": "Slug",
           "PLACEHOLDER": "Slug de la categoría para URLs",
-          "HELP_TEXT": "app.chatwoot.com/hc/mi-portal/es-ES/categorías/mi-slug",
+          "HELP_TEXT": "app.chatzi.com/hc/mi-portal/es-ES/categorías/mi-slug",
           "ERROR": "El slug es obligatorio"
         },
         "DESCRIPTION": {
@@ -417,7 +417,7 @@
         "SLUG": {
           "LABEL": "Slug",
           "PLACEHOLDER": "Slug de la categoría para URLs",
-          "HELP_TEXT": "app.chatwoot.com/hc/mi-portal/es-ES/categorías/mi-slug",
+          "HELP_TEXT": "app.chatzi.com/hc/mi-portal/es-ES/categorías/mi-slug",
           "ERROR": "El slug es obligatorio"
         },
         "DESCRIPTION": {

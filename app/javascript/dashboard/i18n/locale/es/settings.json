@@ -316,7 +316,7 @@
     "NO_BILLING_USER": "Tu cuenta de facturación está siendo configurada. Por favor refresca la página e intenta de nuevo."
   },
   "CREATE_ACCOUNT": {
-    "NO_ACCOUNT_WARNING": "¡Oh no! No pudimos encontrar ninguna cuenta de Chatwoot. Por favor crea una nueva cuenta para continuar.",
+    "NO_ACCOUNT_WARNING": "¡Oh no! No pudimos encontrar ninguna cuenta de ChatZi. Por favor crea una nueva cuenta para continuar.",
     "NEW_ACCOUNT": "Nueva Cuenta",
     "SELECTOR_SUBTITLE": "Crear una nueva cuenta",
     "API": {

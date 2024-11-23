@@ -48,10 +48,10 @@
         "CUSTOM_EMAIL_DOMAIN_ENABLED": "Ahora puedes recibir correos electrónicos en tu dominio personalizado."
       }
     },
-    "UPDATE_CHATWOOT": "Una actualización %{latestChatwootVersion} para Chatwoot está disponible. Por favor, actualiza tu instancia.",
+    "UPDATE_CHATWOOT": "Una actualización %{latestChatwootVersion} para ChatZi está disponible. Por favor, actualiza tu instancia.",
     "LEARN_MORE": "Aprende más",
-    "PAYMENT_PENDING": "Tu pago está pendiente. Por favor, actualiza tu información de pago para continuar usando Chatwoot",
-    "LIMITS_UPGRADE": "Tu cuenta ha excedido los límites de uso, por favor, actualiza tu plan para continuar usando Chatwoot",
+    "PAYMENT_PENDING": "Tu pago está pendiente. Por favor, actualiza tu información de pago para continuar usando ChatZi",
+    "LIMITS_UPGRADE": "Tu cuenta ha excedido los límites de uso, por favor, actualiza tu plan para continuar usando ChatZi",
     "OPEN_BILLING": "Abrir facturación"
   },
   "FORMS": {
