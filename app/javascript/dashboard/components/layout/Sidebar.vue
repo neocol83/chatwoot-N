@@ -89,7 +89,6 @@ export default {
       isOnChatwootCloud: 'globalConfig/isOnChatwootCloud',
       labels: 'labels/getLabelsOnSidebar',
       teams: 'teams/getMyTeams',
-      isKanbanEnabled: 'kanban/isKanbanEnabled',
     }),
     activeCustomView() {
       if (this.activePrimaryMenu.key === 'contacts') {
@@ -148,12 +147,7 @@ export default {
             menuItem.featureFlag
           );
         }
-        //Desativado para teste A/B se a feature flag pega dinamicamente
-        if (menuItem.key === 'kanban' && !this.isKanbanEnabled) {
-          return false;
-        }
         return true;
-
       });
     },
     activeSecondaryMenu() {
@@ -195,7 +189,6 @@ export default {
     this.$store.dispatch('teams/get');
     this.$store.dispatch('attributes/get');
     this.fetchCustomViews();
-    this.$store.dispatch('kanban/setKanbanEnabled', this.isFeatureEnabledonAccount(this.accountId, 'kanban_board'));
   },
 
   methods: {

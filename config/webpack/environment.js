@@ -59,7 +59,7 @@ environment.loaders.append('audio', {
   },
 });
 
-const preserveNameFor = ['sdk', 'worker', 'KanbanBoard'];
+const preserveNameFor = ['sdk', 'worker'];
 
 environment.config.merge({ resolve });
 environment.config.set('output.filename', chunkData => {

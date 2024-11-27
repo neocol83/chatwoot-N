@@ -46,9 +46,6 @@ import userNotificationSettings from './modules/userNotificationSettings';
 import webhooks from './modules/webhooks';
 import draftMessages from './modules/draftMessages';
 import SLAReports from './modules/SLAReports';
-import kanban from './modules/kanban';
-import rastrearPedido from './modules/rastrearPedido';
-import timerStore from './modules/timerStore';
 import webphone from './modules/webphone';
 
 const plugins = [];
@@ -101,9 +98,6 @@ export default new Vuex.Store({
     draftMessages,
     sla,
     slaReports: SLAReports,
-    kanban,
-    rastrearPedido,
-    timerStore,
     webphone,
   },
   plugins,

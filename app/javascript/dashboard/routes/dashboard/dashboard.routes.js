@@ -10,9 +10,6 @@ import helpcenterRoutes from './helpcenter/helpcenter.routes';
 const AppContainer = () => import('./Dashboard.vue');
 const Captain = () => import('./Captain.vue');
 const Suspended = () => import('./suspended/Index.vue');
-const KanbanBoard = () => import('./kanban/KanbanBoard.vue');
-// Remova a linha abaixo
-// const RastrearPedido = () => import('./rastrear-pedido/RastrearPedido.vue');
 
 export default {
   routes: [
@@ -29,23 +26,6 @@ export default {
             permissions: ['administrator', 'agent', 'custom_role'],
           },
         },
-        {
-          path: frontendURL('accounts/:accountId/kanban'),
-          name: 'kanban_board',
-          component: KanbanBoard,
-          meta: {
-            permissions: ['administrator', 'agent'],
-          },
-        },
-        // Remova o bloco de código abaixo
-        // {
-        //   path: frontendURL('accounts/:accountId/rastreio'),
-        //   name: 'rastreio',
-        //   component: RastrearPedido,
-        //   meta: {
-        //     permissions: ['administrator', 'agent'],
-        //   },
-        // },
         ...inboxRoutes,
         ...conversation.routes,
         ...settings.routes,

@@ -122,8 +122,5 @@
   enabled: false
 - name: channel_api
   enabled: true
-- name: kanban_board
-  enabled: true
-  premium: true
 - name: wavoip
   enabled: false

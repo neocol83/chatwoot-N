@@ -7,13 +7,7 @@ import { validateLoggedInRoutes } from '../helper/routeHelpers';
 import AnalyticsHelper from '../helper/AnalyticsHelper';
 import { buildPermissionsFromRouter } from '../helper/permissionsHelper';
 
-// Remova esta linha, pois o KanbanBoard já deve estar incluído em dashboard.routes
-// const KanbanBoard = () => import('./dashboard/KanbanBoard.vue');
-
-export const routes = [
-  ...dashboard.routes,
-  // Remova a definição da rota do Kanban Board daqui, pois ela já deve estar em dashboard.routes
-];
+const routes = [...dashboard.routes];
 
 export const router = new VueRouter({ mode: 'history', routes });
 export const routesWithPermissions = buildPermissionsFromRouter(routes);
@@ -29,11 +23,6 @@ export const validateAuthenticateRoutePermission = (to, next, { getters }) => {
   if (!to.name) {
     return next(frontendURL(`accounts/${user.account_id}/dashboard`));
   }
-
-  // Remova esta verificação específica para o Kanban Board
-  // if (to.name === 'kanban_board') {
-  //   return next();
-  // }
 
   const nextRoute = validateLoggedInRoutes(to, getters.getCurrentUser);
   return nextRoute ? next(frontendURL(nextRoute)) : next();

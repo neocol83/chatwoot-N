@@ -133,14 +133,6 @@ class ConversationApi extends ApiClient {
   getAllAttachments(conversationId) {
     return axios.get(`${this.url}/${conversationId}/attachments`);
   }
-
-  updateLabels(conversationId, labels) {
-    return axios.post(`${this.url}/${conversationId}/labels`, { labels });
-  }
-
-  updateStatus({ conversationId, status }) {
-    return axios.post(`${this.url}/${conversationId}/toggle_status`, { status });
-  }
 }
 
 export default new ConversationApi();
