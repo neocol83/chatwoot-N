@@ -65,6 +65,14 @@ const primaryMenuItems = accountId => [
     toState: frontendURL(`accounts/${accountId}/settings`),
     toStateName: 'settings_home',
   },
+  {
+    icon: 'task',
+    key: 'kanban_board',
+    label: 'KANBAN_BOARD',
+    featureFlag: 'kanban_board',
+    toState: frontendURL(`accounts/${accountId}/kanban`),
+    toStateName: 'kanban_board',
+  },
 ];
 
 export default primaryMenuItems;

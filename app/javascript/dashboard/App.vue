@@ -10,14 +10,14 @@ import PaymentPendingBanner from './components/app/PaymentPendingBanner.vue';
 import PendingEmailVerificationBanner from './components/app/PendingEmailVerificationBanner.vue';
 import vueActionCable from './helper/actionCable';
 import WootSnackbarBox from './components/SnackbarContainer.vue';
-import { setColorTheme } from './helper/themeHelper';
+import { setColorTheme, loadSavedThemeColor } from './helper/themeHelper';
 import { isOnOnboardingView } from 'v3/helpers/RouteHelper';
 import {
   registerSubscription,
   verifyServiceWorkerExistence,
 } from './helper/pushHelper';
 import ReconnectService from 'dashboard/helper/ReconnectService';
-import Webphone from './components/layout/webphoneComponents/Webphone.vue';
+import { updateThemeColor } from 'dashboard/helper/themeHelper';
 
 export default {
   name: 'App',
@@ -76,6 +76,16 @@ export default {
     this.initializeColorTheme();
     this.listenToThemeChanges();
     this.setLocale(window.chatwootConfig.selectedLocale);
+    loadSavedThemeColor();
+    this.$root.$on('update-theme', ({ theme, color }) => {
+      if (theme === 'color') {
+        setColorTheme(false);
+        updateThemeColor(color);
+      } else {
+        setColorTheme(true);
+      }
+      // Adicione qualquer lógica adicional necessária para atualizar o tema
+    });
   },
   beforeDestroy() {
     if (this.reconnectService) {
@@ -113,6 +123,14 @@ export default {
           }
         })
       );
+    },
+    setKanbanEnabled() {
+      const isKanbanEnabled = this.$chatwoot.isFeatureEnabled(FEATURE_FLAGS.KANBAN_BOARD);
+      this.$store.dispatch('kanban/setKanbanEnabled', isKanbanEnabled);
+    },
+    setRastreioEnabled() {
+      const isRastreioEnabled = this.$chatwoot.isFeatureEnabled(FEATURE_FLAGS.RASTREIO);
+      this.$store.dispatch('rastrearPedido/setRastreioEnabled', isRastreioEnabled);
     },
   },
 };
