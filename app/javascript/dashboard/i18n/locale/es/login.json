@@ -3,7 +3,7 @@
     "TITLE": "Iniciar sesión en ChatZi",
     "EMAIL": {
       "LABEL": "Correo electrónico",
-      "PLACEHOLDER": "example@companyname.com",
+      "PLACEHOLDER": "example{'@'}companyname.com",
       "ERROR": "Por favor, introduce una dirección de correo electrónico válida"
     },
     "PASSWORD": {
