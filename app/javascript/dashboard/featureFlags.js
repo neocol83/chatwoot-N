@@ -33,4 +33,5 @@ export const FEATURE_FLAGS = {
   CAPTAIN: 'captain_integration',
   CUSTOM_ROLES: 'custom_roles',
   WAVOIP: 'wavoip',
+  ANYTHING_LLM: 'anything_llm',
 };

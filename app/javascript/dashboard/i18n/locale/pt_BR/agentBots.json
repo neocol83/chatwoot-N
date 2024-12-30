@@ -29,7 +29,10 @@
       "DISCONNECTED_SUCCESS_MESSAGE": "Bot agente desconectado com sucesso.",
       "ERROR_MESSAGE": "Não foi possível atualizar o bot agente. Por favor, tente novamente.",
       "DISCONNECTED_ERROR_MESSAGE": "Não foi possível desconectar o bot agente. Por favor, tente novamente.",
-      "SELECT_PLACEHOLDER": "Selecione o bot"
+      "SELECT_PLACEHOLDER": "Selecione o bot",
+      "AGENT_HELPER": "Ajudante Avançado",
+      "AGENT_HELPER_DESC": "Habilite um agente especializado em seu negócio, ele vai te auxiliar nas resposta e resumo de suas conversas.",
+      "AGENT_HELPER_PROMPT": " Defina o contexto e as instruções para que a IA gere uma resposta. Você deve fornecer um prompt cuidadosamente elaborado para que a IA possa gerar uma resposta relevante e precisa."
     },
     "ADD": {
       "TITLE": "Configurar novo bot",

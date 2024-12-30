@@ -12,6 +12,14 @@ class Integrations::OpenaiBaseService
 
   pattr_initialize [:hook!, :event!]
 
+  def provider_url
+    hook.settings['url_provider']
+  end
+
+  def model_llm
+    hook.settings['model']
+  end
+
   def perform
     return nil unless valid_event_name?
 
@@ -88,7 +96,7 @@ class Integrations::OpenaiBaseService
     }
 
     Rails.logger.info("OpenAI API request: #{body}")
-    response = HTTParty.post(API_URL, headers: headers, body: body)
+    response = HTTParty.post("#{provider_url}/chat/completions", headers: headers, body: body)
     Rails.logger.info("OpenAI API response: #{response.body}")
 
     return { error: response.parsed_response, error_code: response.code } unless response.success?
