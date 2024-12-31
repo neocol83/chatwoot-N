@@ -52,6 +52,7 @@ const actions = {
         data,
         params.assigneeType
       );
+      return data;
     } catch (error) {
       // Handle error
     }
