@@ -124,5 +124,3 @@
   enabled: true
 - name: wavoip
   enabled: false
-- name: anything_llm
-  enabled: true

@@ -3,11 +3,9 @@ import { mapGetters } from 'vuex';
 import { useAlert } from 'dashboard/composables';
 import SettingsSection from 'dashboard/components/SettingsSection.vue';
 import LoadingState from 'dashboard/components/widgets/LoadingState.vue';
-import WootMessageEditor from '../../../../../components/widgets/WootWriter/Editor.vue';
 
 export default {
   components: {
-    WootMessageEditor,
     LoadingState,
     SettingsSection,
   },
@@ -119,46 +117,6 @@ export default {
           </div>
         </div>
       </SettingsSection>
-      <SettingsSection
-        :title="$t('AGENT_BOTS.BOT_CONFIGURATION.AGENT_HELPER')"
-        :sub-title="$t('AGENT_BOTS.BOT_CONFIGURATION.AGENT_HELPER_DESC')"
-      >
-        <div class="w-3/5 flex flex-col">
-          <label>
-            {{ $t('AGENT_BOTS.BOT_CONFIGURATION.AGENT_LABEL') }}
-            <select v-model="selectedAgentHelperId">
-              <option
-              value="" disabled selected>
-              {{ $t('AGENT_BOTS.BOT_CONFIGURATION.SELECT_AGENT_PLACEHOLDER') }}
-              </option>
-              <option>CareStack</option>
-            </select>
-          </label>
-          <div class="button-container mb-3">
-            <woot-button type="button" color-scheme="primary">
-              {{ $t('AGENT_BOTS.BOT_CONFIGURATION.CREATE_AGENT') }}
-            </woot-button>
-            <woot-button type="button" color-scheme="primary" class="ml-2">
-              {{ $t('AGENT_BOTS.BOT_CONFIGURATION.TRAIN_AGENT') }}
-            </woot-button>
-          </div>
-        </div>
-        <div class="editor-wrap">
-          <label>
-            {{ $t('AGENT_BOTS.BOT_CONFIGURATION.AGENT_HELPER_PROMPT') }}
-          </label>
-          <WootMessageEditor
-            v-model="content"
-            class="message-editor [&>div]:px-1"
-            enable-variables
-            :enable-canned-responses="false"
-            :placeholder="$t('AGENT_BOTS.BOT_CONFIGURATION.AGENT_HELPER_PROMPT')"
-          />
-        </div>
-        <woot-button type="button" color-scheme="primary">
-          {{ $t('AGENT_BOTS.BOT_CONFIGURATION.UPDATE_PROMPT') }}
-        </woot-button>
-      </SettingsSection>
     </form>
   </div>
 </template>
@@ -166,18 +124,5 @@ export default {
 <style scoped lang="scss">
 .button--disconnect {
   @apply ml-2;
-}
-::v-deep {
-  .ProseMirror-menubar {
-    @apply hidden;
-  }
-
-  .ProseMirror-woot-style {
-    @apply min-h-[12.5rem];
-
-    p {
-      @apply text-base;
-    }
-  }
 }
 </style>
