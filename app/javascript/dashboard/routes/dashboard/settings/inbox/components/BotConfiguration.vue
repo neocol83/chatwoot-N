@@ -125,24 +125,27 @@ export default {
       >
         <div class="w-3/5 flex flex-col">
           <label>
-            Agente
+            {{ $t('AGENT_BOTS.BOT_CONFIGURATION.AGENT_LABEL') }}
             <select v-model="selectedAgentHelperId">
-              <option value="" disabled selected>Selecione um Agente</option>
+              <option
+              value="" disabled selected>
+              {{ $t('AGENT_BOTS.BOT_CONFIGURATION.SELECT_AGENT_PLACEHOLDER') }}
+              </option>
               <option>CareStack</option>
             </select>
           </label>
           <div class="button-container mb-3">
             <woot-button type="button" color-scheme="primary">
-              Novo Agente
+              {{ $t('AGENT_BOTS.BOT_CONFIGURATION.CREATE_AGENT') }}
             </woot-button>
             <woot-button type="button" color-scheme="primary" class="ml-2">
-              Treinar Agente
+              {{ $t('AGENT_BOTS.BOT_CONFIGURATION.TRAIN_AGENT') }}
             </woot-button>
           </div>
         </div>
         <div class="editor-wrap">
           <label>
-            Prompt
+            {{ $t('AGENT_BOTS.BOT_CONFIGURATION.AGENT_HELPER_PROMPT') }}
           </label>
           <WootMessageEditor
             v-model="content"
@@ -153,7 +156,7 @@ export default {
           />
         </div>
         <woot-button type="button" color-scheme="primary">
-          Atualizar
+          {{ $t('AGENT_BOTS.BOT_CONFIGURATION.UPDATE_PROMPT') }}
         </woot-button>
       </SettingsSection>
     </form>
