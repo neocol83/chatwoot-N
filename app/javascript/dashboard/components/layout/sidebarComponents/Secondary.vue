@@ -269,12 +269,12 @@ export default {
       class="pt-2 mb-0 ml-0 list-none"
     >
       <SecondaryNavItem
-        v-for="menuItem in accessibleMenuItems"
+        v-for="menuItem in accessibleMenuItems.filter(item => item.toState)"
         :key="menuItem.toState"
         :menu-item="menuItem"
       />
       <SecondaryNavItem
-        v-for="menuItem in additionalSecondaryMenuItems[menuConfig.parentNav]"
+        v-for="menuItem in additionalSecondaryMenuItems[menuConfig.parentNav].filter(item => item.key && item.toState)"
         :key="menuItem.key"
         :menu-item="menuItem"
         @addLabel="showAddLabelPopup"
