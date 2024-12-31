@@ -18,6 +18,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  // logo: {
+  //   type: String,
+  //   default: '',
+  // },
   enabled: {
     type: Boolean,
     default: false,

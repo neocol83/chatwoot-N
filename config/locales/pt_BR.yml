@@ -208,8 +208,8 @@ pt_BR:
       name: "Tradutor do Google"
       description: "Integre o Google Tradutor para ajudar os agentes a traduzir facilmente as mensagens dos clientes. Esta integração detecta automaticamente o idioma e o converte para o idioma preferido do agente ou do administrador."
     openai:
-      name: "OpenAI"
-      description: "Aproveite o poder dos grandes modelos de linguagem do OpenAI com recursos como sugestões de resposta, resumo, reformulação de mensagens, verificação ortográfica e classificação de rótulos."
+      name: "IA Generativa"
+      description: "Aproveite o poder dos grandes modelos de IA Generativa como OpenAI, Groq, LocalAI  outros, com recursos como sugestões de resposta, resumo, reformulação de mensagens, verificação ortográfica e classificação de rótulos."
     linear:
       name: "Linear"
       description: "Crie issues em Linear diretamente da sua janela de conversa. Alternativamente, vincule as issues lineares existentes para um processo de rastreamento de problemas mais simples e eficiente."

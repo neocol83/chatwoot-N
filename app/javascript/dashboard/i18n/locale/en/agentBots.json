@@ -29,7 +29,15 @@
       "DISCONNECTED_SUCCESS_MESSAGE": "Successfully disconnected the agent bot.",
       "ERROR_MESSAGE": "Could not update the agent bot. Please try again.",
       "DISCONNECTED_ERROR_MESSAGE": "Could not disconnect the agent bot. Please try again.",
-      "SELECT_PLACEHOLDER": "Select bot"
+      "SELECT_PLACEHOLDER": "Select bot",
+      "AGENT_HELPER": "Agent Helper",
+      "AGENT_HELPER_DESC": "Enable an agent specialized in your business, who will help you respond and summarize your conversations.",
+      "AGENT_LABEL": "Agent",
+      "SELECT_AGENT_PLACEHOLDER": "Select agent",
+      "CREATE_AGENT": "Create agent",
+      "TRAIN_AGENT": "Train agent",
+      "AGENT_HELPER_PROMPT": "I'm here to help you with your conversations. I can suggest responses and help you summarize conversations.",
+      "UPDATE_PROMPT": "Update"
     },
     "ADD": {
       "TITLE": "Configure new bot",

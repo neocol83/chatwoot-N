@@ -7,13 +7,21 @@ class Api::V1::Accounts::Conversations::MessagesController < Api::V1::Accounts::
     user = Current.user || @resource
     mb = Messages::MessageBuilder.new(user, @conversation, params)
     @message = mb.perform
+    update_conversation_status
   rescue StandardError => e
     render_could_not_create_error(e.message)
   end
 
+  def update_conversation_status
+    # change conversation status to open if resolved or snoozed
+    return unless @conversation.status == 'resolved' || @conversation.status == 'snoozed'
+
+    @conversation.update!(status: :open)
+  end
+
   def destroy
     return head :bad_request unless message.can_delete_message?
-  
+
     ActiveRecord::Base.transaction do
       original_content = message.content
       new_content = "⛔#{I18n.t('conversations.messages.deleted')}\n#{original_content}"
@@ -52,8 +60,8 @@ class Api::V1::Accounts::Conversations::MessagesController < Api::V1::Accounts::
   def forward
     ::Conversations::ForwardMessageJob.perform_later(forward_message_params)
     head :ok
-    rescue StandardError => e
-      render e
+  rescue StandardError => e
+    render e
   end
 
   private
