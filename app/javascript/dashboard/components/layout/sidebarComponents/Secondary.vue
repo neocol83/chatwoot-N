@@ -38,11 +38,11 @@ export default {
     },
     menuConfig: {
       type: Object,
-      default: () => {},
+      default: () => ({}),
     },
     currentUser: {
       type: Object,
-      default: () => {},
+      default: () => ({}),
     },
     isOnChatwootCloud: {
       type: Boolean,
@@ -85,17 +85,17 @@ export default {
     },
 
     hideAllInboxForAgents() {
-    return (
-      this.isFeatureEnabledonAccount(
-        this.accountId,
-        'hide_all_inbox_for_agent'
-      ) && this.currentRole !== 'administrator'
-    );
-  },
-  inboxSection() {
-    if (this.hideAllInboxForAgents && this.currentRole !== 'administrator') {
-      return {};
-    }
+      return (
+        this.isFeatureEnabledonAccount(
+          this.accountId,
+          'hide_all_inbox_for_agent'
+        ) && this.currentRole !== 'administrator'
+      );
+    },
+    inboxSection() {
+      if (this.hideAllInboxForAgents && this.currentRole !== 'administrator') {
+        return null;
+      }
       return {
         icon: 'folder',
         label: 'INBOXES',
@@ -238,8 +238,8 @@ export default {
         contactMenuItems = [this.contactSegmentsSection, ...contactMenuItems];
       }
       return {
-        conversations: conversationMenuItems,
-        contacts: contactMenuItems,
+        conversations: conversationMenuItems.filter(item => item !== null),
+        contacts: contactMenuItems.filter(item => item !== null),
       };
     },
   },
