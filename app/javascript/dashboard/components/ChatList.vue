@@ -229,28 +229,33 @@ export default {
       currentRole: 'getCurrentRole',
       accountId: 'getCurrentAccountId',
     }),
+    isAdministrator () {
+      return (
+        this.currentRole === 'administrator'
+      );
+    },
     hideAllChatsForAgents() {
       return (
-        this.currentRole !== 'administrator' &&
         this.isFeatureEnabledonAccount(
-          this.accountId,
+          this.currentAccountId,
           'hide_all_chats_for_agent'
-        )
+        ) && !this.isAdministrator
       );
     },
     hideUnassingnedForAgents() {
       return (
-        this.currentRole !== 'administrator' &&
         this.isFeatureEnabledonAccount(
-          this.accountId,
+          this.currentAccountId,
           'hide_unassigned_for_agent'
-        )
+        ) && !this.isAdministrator
       );
     },
     hideFiltersForAgents() {
       return (
-        this.currentRole !== 'administrator' &&
-        this.isFeatureEnabledonAccount(this.accountId, 'hide_filters_for_agent')
+        this.isFeatureEnabledonAccount(
+          this.currentAccountId,
+          'hide_filters_for_agent'
+        ) && !this.isAdministrator
       );
     },
     hasAppliedFilters() {
@@ -284,11 +289,21 @@ export default {
         ASSIGNEE_TYPE_TAB_PERMISSIONS,
         this.userPermissions,
         item => item.permissions
-      ).map(({ key, count: countKey }) => ({
-        key,
-        name: this.$t(`CHAT_LIST.ASSIGNEE_TYPE_TABS.${key}`),
-        count: this.conversationStats[countKey] || 0,
-      }));
+      )
+        .filter(({ key }) => {
+          if (this.hideAllChatsForAgents && key === 'all') {
+            return false;
+          }
+          if (this.hideUnassignedForAgents && key === 'unassigned') {
+            return false;
+          }
+          return true;
+        })
+        .map(({ key, count: countKey }) => ({
+          key,
+          name: this.$t(`CHAT_LIST.ASSIGNEE_TYPE_TABS.${key}`),
+          count: this.conversationStats[countKey] || 0,
+        }));
     },
     showAssigneeInConversationCard() {
       return (
