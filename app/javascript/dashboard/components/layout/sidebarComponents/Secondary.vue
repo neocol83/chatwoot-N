@@ -38,11 +38,11 @@ export default {
     },
     menuConfig: {
       type: Object,
-      default: () => {},
+      default: () => ({}),
     },
     currentUser: {
       type: Object,
-      default: () => {},
+      default: () => ({}),
     },
     isOnChatwootCloud: {
       type: Boolean,
@@ -85,17 +85,17 @@ export default {
     },
 
     hideAllInboxForAgents() {
-    return (
-      this.isFeatureEnabledonAccount(
-        this.accountId,
-        'hide_all_inbox_for_agent'
-      ) && this.currentRole !== 'administrator'
-    );
-  },
-  inboxSection() {
-    if (this.hideAllInboxForAgents && this.currentRole !== 'administrator') {
-      return {};
-    }
+      return (
+        this.isFeatureEnabledonAccount(
+          this.accountId,
+          'hide_all_inbox_for_agent'
+        ) && this.currentRole !== 'administrator'
+      );
+    },
+    inboxSection() {
+      if (this.hideAllInboxForAgents && this.currentRole !== 'administrator') {
+        return null;
+      }
       return {
         icon: 'folder',
         label: 'INBOXES',
@@ -238,8 +238,8 @@ export default {
         contactMenuItems = [this.contactSegmentsSection, ...contactMenuItems];
       }
       return {
-        conversations: conversationMenuItems,
-        contacts: contactMenuItems,
+        conversations: conversationMenuItems.filter(item => item !== null),
+        contacts: contactMenuItems.filter(item => item !== null),
       };
     },
   },
@@ -269,12 +269,12 @@ export default {
       class="pt-2 mb-0 ml-0 list-none"
     >
       <SecondaryNavItem
-        v-for="menuItem in accessibleMenuItems.filter(item => item.toState)"
+        v-for="menuItem in accessibleMenuItems"
         :key="menuItem.toState"
         :menu-item="menuItem"
       />
       <SecondaryNavItem
-        v-for="menuItem in additionalSecondaryMenuItems[menuConfig.parentNav].filter(item => item.key && item.toState)"
+        v-for="menuItem in additionalSecondaryMenuItems[menuConfig.parentNav]"
         :key="menuItem.key"
         :menu-item="menuItem"
         @addLabel="showAddLabelPopup"
