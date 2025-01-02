@@ -293,7 +293,7 @@ export default {
           if (this.hideAllChatsForAgents && key === 'all') {
             return false;
           }
-          if (this.hideUnassingnedForAgents && key === 'unassigned') {
+          if (this.hideUnassignedForAgents && key === 'unassigned') {
             return false;
           }
           return true;
