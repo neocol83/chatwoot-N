@@ -9,9 +9,9 @@ set -eu -o errexit -o pipefail -o noclobber -o nounset
 
 # -allow a command to fail with !’s side effect on errexit
 # -use return value from ${PIPESTATUS[0]}, because ! hosed $?
-! getopt --test > /dev/null
-if [[ ${PIPESTATUS[0]} -ne 4 ]]; then
-    echo '`getopt --test` failed in this environment.'
+getopt --test > /dev/null
+if [[ $? -ne 4 ]]; then
+    echo '`getopt --test` failed. Ensure you have GNU getopt installed.'
     exit 1
 fi
 
@@ -20,7 +20,7 @@ fi
 LONGOPTS=console,debug,help,install,Install:,logs:,restart,ssl,upgrade,webserver,version
 OPTIONS=cdhiI:l:rsuwv
 CWCTL_VERSION="2.8.0"
-pg_pass=$(head /dev/urandom | tr -dc A-Za-z0-9 | head -c 15 ; echo '')
+pg_pass=$(openssl rand -base64 15 | tr -d '/+=\n' | cut -c1-15)
 
 # if user does not specify an option
 if [ "$#" -eq 0 ]; then
@@ -32,8 +32,8 @@ fi
 # -temporarily store output to be able to check for errors
 # -activate quoting/enhanced mode (e.g. by writing out “--options”)
 # -pass arguments only via   -- "$@"   to separate them correctly
-! PARSED=$(getopt --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
-if [[ ${PIPESTATUS[0]} -ne 0 ]]; then
+PARSED=$(getopt --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
+if [[ $? -ne 0 ]]; then
     # e.g. return value is 1
     #  then getopt has complained about wrong arguments to stdout
     exit 2
@@ -62,14 +62,16 @@ while true; do
             BRANCH="master"
             break
             ;;
-       -I|--Install)
+        -I|--Install)
             I=y
             BRANCH="$2"
+            shift 2
             break
             ;;
         -l|--logs)
             l=y
             SERVICE="$2"
+            shift 2
             break
             ;;
         -r|--restart)
@@ -129,7 +131,7 @@ trap exit_handler EXIT
 ##############################################################################
 function exit_handler() {
   if [ "$?" -ne 0 ] && [ "$u" == "n" ]; then
-   echo -en "\nSome error has occured. Check '/var/log/chatwoot-setup.log' for details.\n"
+     echo -en "\nSome error has occured. Check '/var/log/chatwoot-setup.log' for details.\n"
    exit 1
   fi
 }
